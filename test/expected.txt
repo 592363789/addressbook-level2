@@ -94,7 +94,7 @@
 || 1 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Betsy Choo pp/222222 pe/benchoo@nus.edu.sg pa/222, beta street t/secretive]
-|| Person addresses can not be in any format
+|| Person addresses can not be like before
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street, 01, 215000 Tags: 
@@ -121,7 +121,7 @@
 || 3 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
-|| Person addresses can not be in any format
+|| Person addresses can not be like before
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street, 01, 215000 Tags: 
@@ -131,7 +131,7 @@
 || 3 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
-|| Person addresses can not be in any format
+|| Person addresses can not be like before
 || ===================================================
 || Enter command: || [Command entered:  view]
 || Invalid command format! 
