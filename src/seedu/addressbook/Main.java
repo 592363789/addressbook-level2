@@ -3,6 +3,7 @@ package seedu.addressbook;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.CommandResult;
@@ -14,6 +15,7 @@ import seedu.addressbook.storage.StorageFile;
 import seedu.addressbook.storage.StorageFile.InvalidStorageFilePathException;
 import seedu.addressbook.storage.StorageFile.StorageOperationException;
 import seedu.addressbook.ui.TextUi;
+import seedu.addressbook.common.Messages;
 
 
 /**
@@ -28,6 +30,7 @@ public class Main {
     private TextUi ui;
     private StorageFile storage;
     private AddressBook addressBook;
+    private final Scanner in = new Scanner(System.in);
 
     /** The list of person shown to the user most recently.  */
     private List<? extends ReadOnlyPerson> lastShownList = Collections.emptyList();
@@ -106,12 +109,19 @@ public class Main {
      * @return result of the command
      */
     private CommandResult executeCommand(Command command)  {
+        command.setData(addressBook, lastShownList);
+        CommandResult result = command.execute();
         try {
-            command.setData(addressBook, lastShownList);
-            CommandResult result = command.execute();
             storage.save(addressBook);
             return result;
-        } catch (Exception e) {
+
+        } catch (StorageOperationException se) {
+            ui.showToUser(storage.getPath() + Messages. MESSAGE_READONLY);
+            String inputString = in.nextLine();
+            executeCommand(command);
+            return result;
+        }
+        catch (Exception e) {
             ui.showToUser(e.getMessage());
             throw new RuntimeException(e);
         }
