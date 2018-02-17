@@ -3,10 +3,12 @@ package seedu.addressbook.data.person;
 import com.sun.corba.se.pept.transport.ContactInfoListIterator;
 import seedu.addressbook.data.exception.IllegalValueException;
 
+/**
+ * super class of Address, Phone, Email class
+ */
 public class Contact {
     public final String value;
     private boolean isPrivate;
-
     /**
      * Validates given address.
      *
@@ -17,7 +19,6 @@ public class Contact {
         this.isPrivate = isPrivate;
         this.value = trimmedInformation;
     }
-
     /**
      * Returns true if a given string is a valid person address.
      */
@@ -26,8 +27,6 @@ public class Contact {
     public String toString() {
         return value;
     }
-
-
 
     @Override
     public int hashCode() {

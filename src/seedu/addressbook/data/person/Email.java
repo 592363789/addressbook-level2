@@ -21,7 +21,7 @@ public class Email extends Contact{
      */
     public Email(String email, boolean isPrivate) throws IllegalValueException {
         super(email, isPrivate);
-                String trimmedEmail = email.trim();
+        String trimmedEmail = email.trim();
         if (!isValidEmail(trimmedEmail)) {
             throw new IllegalValueException(MESSAGE_EMAIL_CONSTRAINTS);
         }
