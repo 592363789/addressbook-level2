@@ -110,6 +110,16 @@ public class UniquePersonList implements Iterable<Person> {
         internalList.add(toAdd);
     }
 
+    public void update(Person toUpdate) {
+        for (int i = 0; i < internalList.size(); i++) {
+            if (internalList.get(i).getName().equals(toUpdate.getName())) {
+                internalList.get(i).update(toUpdate);
+                break;
+            }
+
+        }
+
+    }
     /**
      * Removes the equivalent person from the list.
      *

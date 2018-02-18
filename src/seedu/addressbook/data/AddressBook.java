@@ -83,6 +83,12 @@ public class AddressBook {
         syncTagsWithMasterList(toAdd);
     }
 
+    public void updatePerson(Person toUpdate) {
+        allPersons.update(toUpdate);
+        syncTagsWithMasterList(toUpdate);
+    }
+
+
     /**
      * Returns true if an equivalent person exists in the address book.
      */

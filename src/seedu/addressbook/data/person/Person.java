@@ -66,6 +66,11 @@ public class Person implements ReadOnlyPerson {
         tags.setTags(replacement);
     }
 
+    public void update(Person p) {
+        this.address = p.getAddress();
+        this.email = p.getEmail();
+        this.phone = p.getPhone();
+    }
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
