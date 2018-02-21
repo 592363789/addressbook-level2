@@ -16,12 +16,8 @@ public class SortCommand extends Command {
             + ": Sorts all persons in the address book as a list with names.\n"
             + "Example: " + COMMAND_WORD;
 
-
-
     public CommandResult execute() {
-
         addressBook.sort();
         return new CommandResult(String.format(MESSAGE_SORT_PERSON_SUCCESS));
-
     }
 }

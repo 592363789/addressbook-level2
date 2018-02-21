@@ -40,13 +40,7 @@ public class Person implements ReadOnlyPerson, Comparable<Person> {
     }
 
     public int compareTo(Person p2) {
-        if (this.name.toString().compareTo( p2.getName().toString())> 0) {
-            return 1;
-        } else if (this.name.toString().compareTo( p2.getName().toString())== 0) {
-            return 0;
-        } else {
-            return -1;
-        }
+        return this.name.toString().compareTo( p2.getName().toString());
 
     }
 
